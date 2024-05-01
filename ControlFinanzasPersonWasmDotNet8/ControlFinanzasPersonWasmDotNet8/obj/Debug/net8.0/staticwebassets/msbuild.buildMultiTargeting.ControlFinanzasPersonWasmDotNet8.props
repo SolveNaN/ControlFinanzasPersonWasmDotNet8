@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ControlFinanzasPersonWasmDotNet8.props" />
+</Project>

@@ -1,0 +1,35 @@
+﻿@page "/"
+@inject HttpClient Http
+<PageTitle>Home</PageTitle>
+
+<h1>FINANZAS PERSONALES</h1>
+<br />
+Estado de la conexión actual
+<br />
+<br />
+<p>@conexionServidor</p>
+<p>@conexionUsuarios</p>
+<p>@conexionMovimientos</p>
+
+@code{
+    string conexionServidor = "En espera..";
+    string conexionUsuarios = "En espera..";
+    string conexionMovimientos = "En espera..";
+
+    async Task ProbarConexion()
+    {
+        var respuesta = await Http.GetStringAsync("https://localhost:7206/api/Usuario/ConexionServidor");
+        var respuestaUser = await Http.GetStringAsync("https://localhost:7206/api/Usuario/ConexionUsuarios");
+        var respuestaMovimientos = await Http.GetStringAsync("https://localhost:7206/api/Movimiento/ConexionMovimientos");
+        conexionServidor = respuesta;
+        conexionUsuarios = respuestaUser;
+        conexionMovimientos = respuestaMovimientos;
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ProbarConexion();
+    }
+
+}

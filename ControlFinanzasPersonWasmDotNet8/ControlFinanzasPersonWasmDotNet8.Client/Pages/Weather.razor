@@ -1,0 +1,146 @@
+﻿@page "/weather"
+@using ControlFinanzasPersonWasmDotNet8.Shared
+@inject HttpClient Http
+<PageTitle>Movimientos</PageTitle>
+
+<h1>Movimientos</h1>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Nombre</th>
+
+            <th scope="col">Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+            @foreach(var movimiento in Movimientos)
+            {
+            <tr>
+                <th scope="row">@movimiento.Id</th>
+                <th scope="row">@movimiento.Fecha</th>
+                <th scope="row">@movimiento.Descripcion</th>
+                <th scope="row">@movimiento.Cantidad</th>
+                <th scope="row">@movimiento.Tipo</th>
+                <th scope="row">@movimiento.Usuario.Nombre</th>
+              
+
+                <td>
+                    <button class="btn btn-success" @onclick="(()=>Asignar(movimiento))">Editar</button>
+
+
+
+                    <button class="btn btn-warning" @onclick="(()=>EliminarMovimiento(movimiento.Id))">Eliminar</button>
+                </td>
+            </tr>
+            }
+            
+     
+    </tbody>
+</table>
+<br />
+<h3>Nuevo Movimiento</h3>
+
+
+
+<label>Usuario</label>
+<EditForm Model="@movimiento">
+    <InputSelect class="form-control" @bind-Value="@movimiento.UsuarioId">
+        <option selected value=0>Elegir Usuario</option>
+        @foreach (var usuario in Listado)
+        {
+            <option value="@usuario.Id">@usuario.Nombre</option>
+        }
+    </InputSelect>
+</EditForm>
+<label>Contidad</label>
+<input class="form-control" type="number" @bind-value=movimiento.Cantidad />
+<label>Tipo</label>
+<select class="form-control" @bind="movimiento.Tipo">
+    <option selected value="Ingreso">Ingreso</option>
+    <option selected value="Egreso">Egreso</option>
+</select>
+<label>Descripcion</label>
+
+<input type="text" class="form-control" @bind-value=movimiento.Descripcion />
+<br />
+<button class="btn btn-primary" @onclick="CrearNuevoMovimiento">Guardar</button>
+
+<br />
+<br />
+<br />
+<h3>Formulario de edicion</h3>
+<br />
+
+<EditForm Model="@movimientoEdicion">
+    <InputSelect class="form-control" @bind-Value="@movimientoEdicion.UsuarioId">
+        <option selected value=0>Elegir Usuario</option>
+        @foreach (var usuario in Listado)
+        {
+            <option value="@usuario.Id">@usuario.Nombre</option>
+        }
+    </InputSelect>
+</EditForm>
+<label>Contidad</label>
+<input class="form-control" type="number" @bind-value=movimientoEdicion.Cantidad />
+<label>Tipo</label>
+<select class="form-control" @bind="movimientoEdicion.Tipo">
+    <option selected value="Ingreso">Ingreso</option>
+    <option selected value="Egreso">Egreso</option>
+</select>
+<label>Descripcion</label>
+<input type="text" class="form-control" @bind-value=movimientoEdicion.Descripcion />
+<br />
+<button class="btn btn-primary" @onclick="GuardarCambios">Guardar Cambios</button>
+@code {
+    public static List<Usuario> Listado = new List<Usuario>();
+    public static List<Movimiento> Movimientos = new List<Movimiento>();
+    Usuario miUsuario = new Usuario();
+    Movimiento movimiento = new Movimiento();
+    Movimiento movimientoEdicion = new Movimiento();
+    protected override async Task OnInitializedAsync()
+    {
+        await Actualizar();
+    }
+
+
+    async Task CrearNuevoMovimiento()
+    {
+        var respuesta = await Http.PostAsJsonAsync("api/Movimiento/NuevoMovimiento", movimiento);
+        await Actualizar();
+    }
+
+    async Task Actualizar()
+    {
+        var usuarios = await Http.GetFromJsonAsync<List<Usuario>>("https://localhost:7206/api/Usuario/ObtenerUsuarios");
+        Listado = usuarios;
+
+        var movimientos = await Http.GetFromJsonAsync<List<Movimiento>>("https://localhost:7206/api/Movimiento/ObtenerMovimientos");
+        Movimientos = movimientos;
+    }
+
+    async Task EliminarMovimiento(int id)
+    {
+        var respuesta = await Http.DeleteAsync($"https://localhost:7206/api/Movimiento/{id}");
+        await Actualizar();
+
+    }
+
+
+    async Task Asignar(Movimiento mimovimiento)
+    {
+        movimientoEdicion = mimovimiento;
+    }
+
+    async Task GuardarCambios()
+    {
+        var respuesta = await Http.PutAsJsonAsync($"https://localhost:7206/api/Movimiento/{movimientoEdicion.Id}", movimientoEdicion);
+        await Actualizar();
+    }
+}

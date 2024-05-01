@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\ControlFinanzasPersonWasmDotNet8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ABB280-FDDA-40F4-93E4-58248ED3E4C3}|ControlFinanzasPersonWasmDotNet8.Client\\ControlFinanzasPersonWasmDotNet8.Client.csproj|c:\\users\\dagoberto\\documents\\cursoblazorwebappdotnet8\\proyecs\\controlfinanzaspersonwasmdotnet8\\controlfinanzaspersonwasmdotnet8.client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B0ABB280-FDDA-40F4-93E4-58248ED3E4C3}|ControlFinanzasPersonWasmDotNet8.Client\\ControlFinanzasPersonWasmDotNet8.Client.csproj|solutionrelative:controlfinanzaspersonwasmdotnet8.client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0ABB280-FDDA-40F4-93E4-58248ED3E4C3}|ControlFinanzasPersonWasmDotNet8.Client\\ControlFinanzasPersonWasmDotNet8.Client.csproj|c:\\users\\dagoberto\\documents\\cursoblazorwebappdotnet8\\proyecs\\controlfinanzaspersonwasmdotnet8\\controlfinanzaspersonwasmdotnet8.client\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B0ABB280-FDDA-40F4-93E4-58248ED3E4C3}|ControlFinanzasPersonWasmDotNet8.Client\\ControlFinanzasPersonWasmDotNet8.Client.csproj|solutionrelative:controlfinanzaspersonwasmdotnet8.client\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C5369A4-18A0-42AC-A471-29F4BD45B42F}|ControlFinanzasPersonWasmDotNet8\\ControlFinanzasPersonWasmDotNet8.csproj|c:\\users\\dagoberto\\documents\\cursoblazorwebappdotnet8\\proyecs\\controlfinanzaspersonwasmdotnet8\\controlfinanzaspersonwasmdotnet8\\controllers\\movimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C5369A4-18A0-42AC-A471-29F4BD45B42F}|ControlFinanzasPersonWasmDotNet8\\ControlFinanzasPersonWasmDotNet8.csproj|solutionrelative:controlfinanzaspersonwasmdotnet8\\controllers\\movimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3074A237-7271-48B4-B2E4-E99C99D4E677}|..\\ControlFinanzasPersonWasmDotNet8.Shared\\ControlFinanzasPersonWasmDotNet8.Shared.csproj|c:\\users\\dagoberto\\documents\\cursoblazorwebappdotnet8\\proyecs\\controlfinanzaspersonwasmdotnet8.shared\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\ControlFinanzasPersonWasmDotNet8\\ControlFinanzasPersonWasmDotNet8.Client\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "ControlFinanzasPersonWasmDotNet8.Client\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\ControlFinanzasPersonWasmDotNet8\\ControlFinanzasPersonWasmDotNet8.Client\\Pages\\Home.razor",
+              "RelativeToolTip": "ControlFinanzasPersonWasmDotNet8.Client\\Pages\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-07T20:34:17.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Movimiento.cs",
+              "DocumentMoniker": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\ControlFinanzasPersonWasmDotNet8.Shared\\Movimiento.cs",
+              "RelativeDocumentMoniker": "..\\ControlFinanzasPersonWasmDotNet8.Shared\\Movimiento.cs",
+              "ToolTip": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\ControlFinanzasPersonWasmDotNet8.Shared\\Movimiento.cs",
+              "RelativeToolTip": "..\\ControlFinanzasPersonWasmDotNet8.Shared\\Movimiento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T20:25:50.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\ControlFinanzasPersonWasmDotNet8\\ControlFinanzasPersonWasmDotNet8.Client\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "ControlFinanzasPersonWasmDotNet8.Client\\Pages\\Weather.razor",
+              "ToolTip": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\ControlFinanzasPersonWasmDotNet8\\ControlFinanzasPersonWasmDotNet8.Client\\Pages\\Weather.razor",
+              "RelativeToolTip": "ControlFinanzasPersonWasmDotNet8.Client\\Pages\\Weather.razor",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-07T20:23:56.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MovimientoController.cs",
+              "DocumentMoniker": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\ControlFinanzasPersonWasmDotNet8\\ControlFinanzasPersonWasmDotNet8\\Controllers\\MovimientoController.cs",
+              "RelativeDocumentMoniker": "ControlFinanzasPersonWasmDotNet8\\Controllers\\MovimientoController.cs",
+              "ToolTip": "C:\\Users\\Dagoberto\\Documents\\CursoBlazorWebAppDotnet8\\Proyecs\\ControlFinanzasPersonWasmDotNet8\\ControlFinanzasPersonWasmDotNet8\\Controllers\\MovimientoController.cs",
+              "RelativeToolTip": "ControlFinanzasPersonWasmDotNet8\\Controllers\\MovimientoController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAAFMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T20:23:31.528Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
